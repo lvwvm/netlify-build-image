@@ -26,8 +26,8 @@ fi
 : "${SWIFT_VERSION="5.2"}"
 : "${PYTHON_VERSION="2.7"}"
 
-BASE_PATH=$(pwd)
-REPO_PATH="$(cd $1 && pwd)"
+BASE_PATH=$(dirname "$0")
+REPO_PATH="$(cd "$1" && pwd)"
 
 mkdir -p tmp
 if [ "$(uname -s)" == "Darwin" ]; then
